@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2017
+# Visual Studio 15
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "receive", "receive.csproj", "{8B1E95C3-4047-EB04-84D1-57E3256D34A7}"
 EndProject
 Global
