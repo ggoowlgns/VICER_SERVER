@@ -15,7 +15,7 @@ public class receiver : MonoBehaviour
     
 
     const int port = 8010;
-    string IP = "192.168.35.211";
+    string IP = "18.179.74.220";
     TcpClient client;
     NetworkStream NS = null;
     StreamWriter SW = null;
@@ -25,7 +25,7 @@ public class receiver : MonoBehaviour
     private bool stop = false;
 
     //This must be the-same with SEND_COUNT on the server
-    const int SEND_RECEIVE_COUNT = 15;
+    const int SEND_RECEIVE_COUNT = 4;
 
     // Use this for initialization
     void Start()
@@ -206,7 +206,9 @@ public class receiver : MonoBehaviour
     void displayReceivedImage(byte[] receivedImageBytes)
     {
         tex.LoadImage(receivedImageBytes);
+        tex.L
         image.texture = tex;
+        image.transform
     }
 
 
