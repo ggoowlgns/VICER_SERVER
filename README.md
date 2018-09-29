@@ -15,10 +15,10 @@ AWS(Amazon Web Service) EC2와 python을 이용하여 Server를 구현하였다.
    * [가입] http://aws.amazon.com/free/<br/>
    
 * 아래의 링크를 들어가면 현재 자신이 운용하고있는 EC2 머신들의 상태를 확인하고 관리 할 수 있다. 
-
+   * [대시보드] https://ap-northeast-2.console.aws.amazon.com/ec2/v2/home?region=ap-northeast-2#Home:
 <img src="./img/대시보드.PNG">
    
-   * [대시보드] https://ap-northeast-2.console.aws.amazon.com/ec2/v2/home?region=ap-northeast-2#Home:
+
    
 * 이제 아마존에서 제공하는 공식 Document를 참조하여 서버를 운용하게 될 Cloud Computer를 생성하도록 한다. 서버를 돌려야하므로 리눅스 운영체제를 선택한다.
    * [EC2 생성하기] https://docs.aws.amazon.com/ko_kr/AWSEC2/latest/UserGuide/concepts.html
