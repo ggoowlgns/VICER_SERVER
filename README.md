@@ -101,6 +101,7 @@ $python3 --version
 * 아마존 SW : https://aws.amazon.com/ko/asl/
    * 아마존 EC2는 프리티어 계정을 사용하여 1년간 무료로 사용하는 것이다.
    * [결제](https://aws.amazon.com/ko/pricing/?nc2=h_ql_pr) 링크에서 자세한 결제 방식을 확인하여 사용 하도록 한다.
+* 파이선 : https://opensource.org/licenses/pythonpl.php
 
 
 
