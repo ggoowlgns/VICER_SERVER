@@ -34,16 +34,24 @@ AWS(Amazon Web Service) EC2와 python을 이용하여 Server를 구현하였다.
 
 > 이로써 EC2 가상머신을 사용할 준비가 모두 끝났다. 추가적으로 설정해 주고싶은 사항은 위의 대시보드에서 언제든지 관리해 주면 된다.
 
+### Putty
+EC2는 Cloud 형태의 컴퓨터로써 웹상으로 존재를 확인할 수는 있지만 직접적으로 사용 할 수는 없다. </br> 따라서 EC2 인스턴스를 사용하기 위해서는 터미널 에뮬레이터를 통하여 조종하여야 하는데 본 프로젝트에서는 무료로 배포되는 Putty를 사용하여 EC2 인스턴스를 다룰 것이다.
+* [Putty] https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html
+   * 자신의 운영체제에 맞는 버전으로 다운 받는다.
+* [User Manual] https://the.earth.li/~sgtatham/putty/0.70/htmldoc/
 
+<img src="./img/putty.jpg">
+#### Puttygen
+위에서 받은 인스턴스의 키 파일은 putty에서 지원하는 키파일과 다른 포맷이다. 때문에 Putty를 이용하여 인스턴스에 접근하기 위해서는 Puttygen이라는 프로그램을 이용하여 바꿔 주어야 한다.
+* [Puttygen] http://www.puttygen.com/
+* 위의 링크에서 puttygen을 받아 인스턴스의 PEM파일을 Putty Private Key로 바꿔준다.
+<img src="./img/puttyGen.jpg">
 
-
+### 이제 Host Name에 위에서 ubuntu@"탄력적IP"를 입력하고(port 22 / SSH접속) putty private key파일을 위 사진의 key file 경로에 입력한 뒤 Open을 눌러주면 아래와 같이 인스턴스에 SSH 방식으로 접속한 것을 확인 할 수 있다.
+<img src="./img/푸티.jpg">
 ### Python
 * 읽고 사용하기쉬운 Python을 사용하여 구현하였다.<br/>
 Python은 위의 AWS EC2 가상머신을 리눅스 운영체제로 구축할 경우 이미 설치 되어 있다.
 
-### Putty
-EC2는 Cloud 형태의 컴퓨터로써 웹상으로 존재를 확인할 수는 있지만 직접적으로 사용 할 수는 없다. </br> 따라서 EC2 인스턴스를 사용하기 위해서는 터미널 에뮬레이터를 통하여 조종하여야 하는데 본 프로젝트에서는 무료로 배포되는 Putty를 사용하여 EC2 인스턴스를 다룰 것이다.
-* [Putty] https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html
-   *
 
 
