@@ -43,7 +43,7 @@ EC2는 Cloud 형태의 컴퓨터로써 웹상으로 존재를 확인할 수는 �
    * 자신의 운영체제에 맞는 버전으로 다운 받는다.
 * [User Manual] https://the.earth.li/~sgtatham/putty/0.70/htmldoc/
 
-<img src="./img/putty.PNG">
+<img src="./img/푸티.PNG">
 
 #### Puttygen
 위에서 받은 인스턴스의 키 파일은 putty에서 지원하는 키파일과 다른 포맷이다. 때문에 Putty를 이용하여 인스턴스에 접근하기 위해서는 Puttygen이라는 프로그램을 이용하여 바꿔 주어야 한다.
@@ -54,7 +54,7 @@ EC2는 Cloud 형태의 컴퓨터로써 웹상으로 존재를 확인할 수는 �
 
 ### 이제 Host Name에 위에서 ubuntu@"탄력적IP"를 입력하고(port 22 / SSH접속) putty private key파일을 위 사진의 key file 경로에 입력한 뒤 Open을 눌러주면 아래와 같이 인스턴스에 SSH 방식으로 접속한 것을 확인 할 수 있다.
 
-<img src="./img/푸티.PNG">
+<img src="./img/result.PNG">
 
 ### Python
 * 읽고 사용하기쉬운 Python을 사용하여 구현하였다.<br/>
