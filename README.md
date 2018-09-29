@@ -73,6 +73,10 @@ $python3 --version
 2. Streaming Server </br>
 
 위에서 설명한 EC2 인스턴스를 두개 준비하여 각각의 인스턴스에서 돌려주어야 한다.
+* 포트설정
+   * 자신이 추가로 포트를 지정해 주고 싶다면 각각의 코드에서 포트를 지정해 주면 된다
+<img src="./img/port.png">
+* 실행하기
 ```
 1. 푸티를 이용하여 인스턴스에 접속한다.
 2. nano(또는 vi)에디터를 이용하여 본 Repository의 RCcar_server.py 와 streaming_server.py를 작성한.(FTP 프로그램을 사용하여 업로드 하여도 된다.)
