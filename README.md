@@ -84,7 +84,7 @@ $python3 --version
    * streaming_server.py 실행 화면
 <img src="./img/RC_putty.PNG">
 </br>
-<img src="./img/st_putty.PNG">
+<img src="./img/st_putty.png">
 
 
 
