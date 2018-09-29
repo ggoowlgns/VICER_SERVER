@@ -50,9 +50,11 @@ EC2는 Cloud 형태의 컴퓨터로써 웹상으로 존재를 확인할 수는 �
 * [Puttygen] http://www.puttygen.com/
 * 위의 링크에서 puttygen을 받아 인스턴스의 PEM파일을 Putty Private Key로 바꿔준다.
 
-<img src="./img/puttyGen.PNG">
+<img src="./img/.PNG">
 
-### 이제 Host Name에 위에서 ubuntu@"탄력적IP"를 입력하고(port 22 / SSH접속) putty private key파일을 위 사진의 key file 경로에 입력한 뒤 Open을 눌러주면 아래와 같이 인스턴스에 SSH 방식으로 접속한 것을 확인 할 수 있다.
+### 이제 Host Name에 위에서 ubuntu@"탄력적IP"를 입력하고(port 22 / SSH접속) putty private key파일을 아래 첫번째 사진의 key file 경로에 입력한 뒤 Open을 눌러주면 아래 두번째 사진과 같이 인스턴스에 SSH 방식으로 접속한 것을 확인 할 수 있다.
+
+<img src="./img/puttyGen.PNG">
 
 <img src="./img/result.PNG">
 
