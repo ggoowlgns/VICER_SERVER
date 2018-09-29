@@ -26,7 +26,7 @@ AWS(Amazon Web Service) EC2와 python을 이용하여 Server를 구현하였다.
 
 * 방금 생성하게된 EC2 인스턴스는 GUI환경이 아닌 리눅스 운영체제이다. 만들어진 인스턴스에 쉽게 접근하고 작업하기 위하여 Putty를 이용 할 것이다.(밑에서 자세한 설치 및 사용 방법을 기재 할 것이다.) 이를 위해서는 SSH 프로토콜 방식으로 제어를 해야하는데 보안그룹에서 인바운드를 설정 해주어야 한다.
    * [보안그룹] https://docs.aws.amazon.com/ko_kr/AWSEC2/latest/UserGuide/using-network-security.html
-<img src="./img/인바운드2.png">
+<img src="./img/인바운드2.PNG">
 
 * 이제 인스턴스를 사용 할 수 있게되었다. 하지만 모든 사람들이 나의 인스턴스에 접속해선 안되기 때문에 비밀번호가 저장된 Key File을 받아야 한다.
    * [Key Pair] https://docs.aws.amazon.com/ko_kr/AWSEC2/latest/UserGuide/ec2-key-pairs.html
