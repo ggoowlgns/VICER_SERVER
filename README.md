@@ -81,8 +81,11 @@ $python3 --version
 ```
 * 결과 화면
    * RCcar_server.py 실행 화면
+]</br>
 <img src="./img/RC_putty.NG">
+</br>
    * streaming_server.py 실행 화면
+</br>
 <img src="./img/ST_putty.PNG">
 
 
