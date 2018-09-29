@@ -85,7 +85,7 @@ $python3 --version
 <img src="./img/RC_putty.PNG">
 </br>
 
-<img src="./img/st_putty.png">
+<img src="./img/ST_putty.png">
 
 
 
