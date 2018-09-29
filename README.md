@@ -16,7 +16,7 @@ AWS(Amazon Web Service) EC2와 python을 이용하여 Server를 구현하였다.
    
 * 아래의 링크를 들어가면 현재 자신이 운용하고있는 EC2 머신들의 상태를 확인하고 관리 할 수 있다. 
 
-   <img src="./img/대시보드.jpg">
+<img src="./img/대시보드.jpg">
    
    * [대시보드] https://ap-northeast-2.console.aws.amazon.com/ec2/v2/home?region=ap-northeast-2#Home:
    
