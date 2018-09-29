@@ -75,7 +75,7 @@ $python3 --version
 위에서 설명한 EC2 인스턴스를 두개 준비하여 각각의 인스턴스에서 돌려주어야 한다.
 ```
 1. 푸티를 이용하여 인스턴스에 접속한다.
-2. nano(또는 vi)에디터를 이용하여 본 Repository의 RCcar_server.py 와 streaming_server.py를 작성한ㄷ.(FTP 프로그램을 사용하여 업로드 하여도 된다.)
+2. nano(또는 vi)에디터를 이용하여 본 Repository의 RCcar_server.py 와 streaming_server.py를 작성한.(FTP 프로그램을 사용하여 업로드 하여도 된다.)
 3. $python3 streaming_server.py 또는 $python3 RCcar_server.py을 입력하여 서버를 실행 시킨다.
 4. 컨트롤러, 360도 카메라가 접속하는것을 확인한다.
 ```
