@@ -1,4 +1,0 @@
-sceneSetups:
-- path: Assets/receive.unity
-  isLoaded: 1
-  isActive: 1
