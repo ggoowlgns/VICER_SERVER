@@ -1,4 +1,3 @@
-
 import sys
 from socket import *
 from threading import Thread
@@ -19,7 +18,7 @@ class myThread_sender(Thread):
             while True:
 
                 if recvReady:
-                    data = self.connection.recv(1024)  # recv next message on connected$
+                    data = self.connection.recv(1024)  # recv next message on connected socket
                     sendReady = True
                     recvReady = False
 
@@ -69,3 +68,36 @@ def rc_server(my_port):
     except OSError as e:
         print('socket error', e)
         sock.close()
+        sys.exit(1)
+    else:
+        print('Server started')
+
+        while True:  # do forever (until process killed)
+            conn, cli_addr = sock.accept()  # wait for next client connect
+            # conn: new socket, addr: client addr
+            print('Connected by', cli_addr)
+            data_encoded = conn.recv(1024)
+            print(data_encoded)
+
+            try:
+                data_decoded =  data_encoded.decode("utf-8")
+                print("decoded data"+ data_decoded)
+                if "K" in data_decoded:
+                    print("in exception")
+                    raise ex
+                else:
+                    print("start thread_sender")
+                    th = myThread_sender(conn)
+                    th.start()
+
+
+            except Exception as ex: #exception 걸려서 오는 상황 (byte가 들어온 reciver 상황)
+                #data_encoded2 = conn.recv(1024)
+                print("start thread_recver")
+                th = myThread_recver(conn)
+                th.start()
+
+
+if __name__ == '__main__':
+    rc_server(8011)
+
