@@ -2,13 +2,17 @@ import sys
 from socket import *
 from threading import Thread
 import binascii
-import PIL.Image
 import io
 
 data = (bytes)
 
+socklist = []
+
 sendReady = False
 recvReady = True
+
+sendint = 1
+#exceptReady = False
 
 class myThread_sender(Thread):
     def __init__(self,connection):
@@ -17,8 +21,13 @@ class myThread_sender(Thread):
         self.resend = True
     def run(self):
         try:
-            global data, sendReady, recvReady
+            global data, sendReady, recvReady, sendint
+            sendint = socklist.index(self.connection)
             while True:
+                sendint = socklist.index(self.connection)
+                #if not exceptReady:
+                #    data = self.connection.recv(65536)
+                #    continue
                 if recvReady:
                     #//print("data :" ,data)
                     data = self.connection.recv(65536)  # recv next message on connected socket
@@ -35,9 +44,10 @@ class myThread_sender(Thread):
                 # # display image
                 # picture.show()
 
-
                 if not data:
                     print("socekt end")
+                    socklist.remove(self.connection)
+                    self.connection.close()
                     break  # eof when the socket closed
 
 
@@ -53,8 +63,8 @@ class myThread_recver(Thread):
         self.connection = connection
         self.resend = True
     def run(self):
+        global sendReady,recvReady, data, sendint
         try:
-            global sendReady,recvReady
             while True:
                 if sendReady:
                     self.connection.send(data)  # send a reply to the client
@@ -63,6 +73,10 @@ class myThread_recver(Thread):
                     #print("reciver go")
 
         except OSError as e:  # socket.error exception
+            while len(data) != 4:
+                data = socklist[sendint].recv(65536)
+            socklist.remove(self.connection)
+            self.connection.close()
             print('socket error:', e)
         except Exception as e:
             print('Exception:', e)
@@ -75,7 +89,7 @@ def echo_server(my_port):
         sock = socket(AF_INET, SOCK_STREAM) # make listening socket
         # sock.setsockopt(SOL_SOCKET, SO_REUSEADDR, 1) # Reuse port number if used
         sock.bind(('', my_port))        # bind it to server port number
-        sock.listen(5)                  # listen, allow 5 pending connects
+        sock.listen(3)                  # listen, allow 5 pending connects
 
 
     except OSError as e:
@@ -88,6 +102,7 @@ def echo_server(my_port):
         while True:  # do forever (until process killed)
             conn, cli_addr = sock.accept()  # wait for next client connect
             # conn: new socket, addr: client addr
+            socklist.append(conn)
             print('Connected by', cli_addr)
             data_encoded = conn.recv(65536)
             print(data_encoded)
@@ -111,5 +126,4 @@ def echo_server(my_port):
 
 
 if __name__ == '__main__':
-    echo_server(8010)
-
+    echo_server(5001)
